@@ -1,13 +1,17 @@
-import React from 'react'
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import UserLayout from './Components/Layout/UserLayout';
 
 const App = () => {
   return (
-    <div>
-        Welcome
-        <h1 className="text-3xl font-bold underline">
-            Hello world!
-        </h1>
-    </div>
+    <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<UserLayout />}>
+                {/* User Layout */}
+            </Route>
+             <Route>{/* Admin Layout */}</Route>
+        </Routes>
+    </BrowserRouter>
   )
 }
 
